@@ -1,0 +1,120 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Card"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context="${packageName}.${activityClass}" >
+
+    <TextView
+        android:id="@+id/Info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Information"
+        android:textColor="#ffffff" />
+
+    <EditText
+        android:id="@+id/CVV2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/Years"
+        android:layout_alignBottom="@+id/Years"
+        android:layout_alignParentRight="true"
+        android:ems="10"
+        android:hint="CVV2"
+        android:inputType="numberSigned"
+        android:textColor="#fff"
+        android:width="75dp" />
+
+    <EditText
+        android:id="@+id/Years"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/Month"
+        android:layout_alignBottom="@+id/Month"
+        android:layout_alignRight="@+id/Info"
+        android:ems="10"
+        android:hint="Année"
+        android:inputType="numberSigned"
+        android:textColor="#fff"
+        android:width="75dp" >
+    </EditText>
+
+    <EditText
+        android:id="@+id/Month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/CardNumber"
+        android:ems="10"
+        android:hint="Mois"
+        android:inputType="numberSigned"
+        android:textColor="#fff"
+        android:width="75dp" />
+
+    <EditText
+        android:id="@+id/CardNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/Info"
+        android:layout_marginTop="112dp"
+        android:ems="10"
+        android:hint="Numéro de la carte"
+        android:inputType="numberSigned"
+        android:textColor="#fff" />
+
+    <EditText
+        android:id="@+id/Titulaire"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/CardNumber"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="35dp"
+        android:ems="10"
+        android:enabled="true"
+        android:hint="Titulaire de la carte"
+        android:inputType="textCapWords"
+        android:textColor="#fff" >
+
+        <requestFocus />
+
+    </EditText>
+
+    <RadioButton
+        android:id="@+id/radVisa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/Month"
+        android:layout_below="@+id/Info"
+        android:layout_marginTop="17dp"
+        android:text="Visa"
+        android:textColor="#fff" />
+
+    <RadioButton
+        android:id="@+id/radMaster"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/radVisa"
+        android:layout_alignBottom="@+id/radVisa"
+        android:layout_toRightOf="@+id/Info"
+        android:text="Mastercard"
+        android:textColor="#fff" />
+
+    <EditText
+        android:id="@+id/Adress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/Years"
+        android:ems="10"
+        android:hint="Adresse"
+        android:inputType="textPostalAddress"
+        android:textColor="#fff" />
+
+</RelativeLayout>
